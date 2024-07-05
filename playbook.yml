@@ -1,7 +1,7 @@
 ---
 - name: Deploy Docker containers with different colors
   hosts: prod
-  become: yes
+  become: true
   tasks:
     - name: Deploy web-color container with default color
       community.docker.docker_container:
@@ -35,4 +35,3 @@
           - "443:8080"
       tags:
         - blue_color
-
